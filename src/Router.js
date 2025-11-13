@@ -1,15 +1,16 @@
-import { createRouter, createWebHistory } from "vue-router";
-import HomeComponent from "./components/HomeComponent.vue";
-import PerfilesComponent from "./components/PerfilesComponent.vue"
-
+import { createWebHistory,createRouter } from 'vue-router';
+import HomeComponent from '@/components/HomeComponent.vue';
+import LoginComponent from '@/components/LoginComponent.vue';
+import PerfilComponent from '@/components/PerfilesComponent.vue';
+import SubordinadosComponent from '@/components/SubordinadosComponent.vue';
 const myRoutes = [
-    {path: "/", component: HomeComponent},
-    { path: "/perfil", component: PerfilesComponent }
+    {path:"/", component: HomeComponent},
+    {path:"/login", component: LoginComponent},
+    {path:"/perfil", component: PerfilComponent},
+    {path:"/subordinados", component: SubordinadosComponent},
 ]
-
 const router = createRouter({
-  history: createWebHistory(),
-  routes: myRoutes
-});
-
-export default router;
+    history: createWebHistory(),
+    routes:myRoutes
+})
+export default router

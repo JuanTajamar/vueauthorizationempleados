@@ -30,4 +30,19 @@ export default class ServiciosEmpleados{
             })
         })
     }
+
+    getSubordinados(token){
+        return new Promise(function (resolve) {
+            let url = Global.urlEmp + "api/Empleados/Subordinados"
+             const config = {
+                headers: {
+                    'Authorization': 'Bearer ' + token,
+                    'Content-Type': 'application/json'
+                }
+            };
+            axios.get(url, config).then(response => {
+                resolve(response.data)
+            })
+        })
+    }
 }
